@@ -66,6 +66,7 @@ class VolumeApp(tk.Tk):
         self.port_entry = tk.Entry(port_frame, textvariable=self.serial_port, width=10)
         self.port_entry.pack(side=tk.LEFT, padx=(5, 0))
         tk.Button(port_frame, text="Connect", command=self.connect_serial, bg="#7289DA", fg="white", bd=0).pack(side=tk.LEFT, padx=10)
+        tk.Frame(self, height=10, bg="#2C2F33").pack()  # Spacer after port selection
 
     def geometry_center(self, width, height):
         screen_width = self.winfo_screenwidth()
